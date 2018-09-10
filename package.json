@@ -1,0 +1,28 @@
+{
+  "name": "give-a-dog-a-bone",
+  "version": "1.0.0",
+  "description": "Full stack web application - an open forum where you can create threads, search for topics, like and comment on posts, and make friends!",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashalkey/give-a-dog-a-bone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashalkey/give-a-dog-a-bone/issues"
+  },
+  "homepage": "https://github.com/ashalkey/give-a-dog-a-bone#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0"
+  }
+}
