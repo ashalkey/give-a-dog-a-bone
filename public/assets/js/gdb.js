@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     var usernameInput = $("#username");
     var passwordInput = $("#password");
-
+    
 $(".signup").on("submit", function(event){
 
     event.preventDefault();
@@ -23,17 +23,13 @@ $(".signup").on("submit", function(event){
 //sends a post request to post user data to the server
 function signUpUser(username, password) {
 
-    var newUser = {
+    $.post("/api/signup", {
         username: username,
         password: password
-    };
-
-    $.ajax("/api/signup", {
-        type: "POST",
-        data: newUser
     }).then(function(data) {
-        console.log("data is", data)
-        console.log("created dat user");
+        window.location.replace(data);
+    }).catch(function(err) {
+        console.log(err.responseJSON);
     });
 }
 
