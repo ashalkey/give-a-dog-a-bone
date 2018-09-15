@@ -1,1 +1,32 @@
-<p>Made it sucka</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <h3>Hello, {{username}}.</h3>
+        </div>
+        <div class="col-md-9">
+            <script type="text/javascript" src="https://theysaidso.com/gadgets/v3/theysaidso.js"></script>
+            <div class="tso_modern_green">
+                <script>TheySaidSo.render({ qod_category: 'life' });</script>
+            </div>
+            <span style="z-index:50;font-size:0.9em;"><img src="https://theysaidso.com/branding/theysaidso.png" height="20"
+                    width="20" alt="theysaidso.com" /><a href="https://theysaidso.com" title="Powered by quotes from theysaidso.com"
+                    style="color: #9fcc25; margin-left: 4px; vertical-align: middle;">theysaidso.com</a></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="/post" class="list-group-item list-group-item-action list-group-item-primary">Create a post</a>
+                <a href="/" class="list-group-item list-group-item-action list-group-item-primary">Search for a post</a>
+                <a href="/logout" class="list-group-item list-group-item-action list-group-item-primary">Logout</a>
+            </div>
+            <form ref='uploadForm' id='uploadForm' action='http://localhost:3000/upload' method='post' encType="multipart/form-data">
+                <input type="file" name="sampleFile" />
+                <input type='submit' value='Upload!' />
+            </form>
+        </div>
+        <div class="col-md-9" id="mostRecentPost">
+            <button id="myPosts" class="btn btn-primary">Most Recent</button>
+        </div>
+    </div>
+</div>

@@ -17,11 +17,11 @@ passport.use(new LocalStrategy(
         }).then(function (dbUser) {
             if(!dbUser) {
                 return done(null, false, {
-                    message: "Incorrect email."
+                    message: "Incorrect username."
                 });
             }
 
-            else if (!dbUser.validPasword(password)) {
+            else if (!dbUser.validPassword(password)) {
                 return done(null, false, {
                     message: "Incorrect password."
                 })

@@ -8,14 +8,13 @@ router.get("/", function (req, res) {
     res.render("login");
 });
 
-router.post("/", passport.authenticate("local", { successRedirect: "/home", 
-                                                  failureFlash: true}), 
-    function(req, res){
-        
-        res.redirect("/home")
-});
+router.post("/", passport.authenticate("local"),
+    function (req, res) {
 
-router.get("/post", function(req, res){
+        res.redirect("/home");
+    });
+
+router.get("/post", function (req, res) {
 
     res.render("index");
 });

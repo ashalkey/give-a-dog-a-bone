@@ -12,7 +12,11 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false,
             len: [1]
         },
-        category: {
+        author: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        topic: {
             type: DataTypes.STRING,
             devaultValue: "Random"
         }

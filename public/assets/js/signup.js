@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+//Load up a random doggo pic
+  var queryURL = "https://dog.ceo/api/breeds/image/random";
+  $.get(queryURL).then(function(response) {
+    $("#doggo-pic").attr("src", response.message);
+  });
+
     var usernameInput = $("#username");
     var passwordInput = $("#password");
 
@@ -31,11 +37,10 @@ function signUpUser(username, password) {
     $.ajax("/api/signup", {
         type: "POST",
         data: newUser
-    }).then(function(data) {
-        console.log("data is", data)
-        console.log("created dat user");
+    }).then(function() {
+        window.location.replace('/home');
     });
-}
+};
 
 
 
